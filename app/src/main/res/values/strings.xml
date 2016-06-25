@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Numers</string>
+    <string name="math">Math</string>
+    <string name="trivia">Trivia</string>
+    <string name="year">Year</string>
+    <string name="fact">Facts</string>
+    <string name="random">Random Facts</string>
+    <string name="about">About Dev</string>
 </resources>
