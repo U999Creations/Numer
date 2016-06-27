@@ -4,8 +4,8 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:text="This is test text for fact fragment"
-        android:id="@+id/frag_fact"
+        android:text="This is test text for Maths facts fragment"
+        android:id="@+id/frag_math_fact"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

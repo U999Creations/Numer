@@ -14,15 +14,14 @@ import butterknife.ButterKnife;
 /**
  * Created by umang on 27/6/16.
  */
-public class FactsFragment extends Fragment {
-
+public class RandomFactsFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_facts, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_random_facts, container, false);
         ButterKnife.bind(this, rootView);
 
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.fact);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.random);
 
         return rootView;
     }
