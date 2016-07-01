@@ -13,6 +13,7 @@ import com.blunderer.materialdesignlibrary.handlers.NavigationDrawerBottomHandle
 import com.blunderer.materialdesignlibrary.handlers.NavigationDrawerStyleHandler;
 import com.blunderer.materialdesignlibrary.handlers.NavigationDrawerTopHandler;
 import com.blunderer.materialdesignlibrary.models.Account;
+import com.google.android.gms.ads.MobileAds;
 
 import me.drakeet.materialdialog.MaterialDialog;
 import xyz.u999.creations.numer.R;
@@ -24,9 +25,11 @@ import xyz.u999.creations.numer.fragments.YearFactsFragment;
 
 public class MainActivity extends NavigationDrawerActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-4812033264637585/6092847952");
     }
 
 

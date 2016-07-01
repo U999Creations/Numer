@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 import com.blunderer.materialdesignlibrary.views.CardView;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import org.jsoup.Jsoup;
@@ -20,6 +22,7 @@ import org.jsoup.nodes.Element;
 import java.io.IOException;
 
 import butterknife.ButterKnife;
+import xyz.u999.creations.numer.AdBanner;
 import xyz.u999.creations.numer.R;
 import xyz.u999.creations.numer.RippleView;
 
@@ -31,6 +34,7 @@ public class RandomFactsFragment extends Fragment {
     AVLoadingIndicatorView pacmanIndicator;
     CardView randomFactCard;
     RippleView fetchRandomFact;
+    AdView bannerAdRandom;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -41,7 +45,19 @@ public class RandomFactsFragment extends Fragment {
 
         randomFactCard = (CardView) rootView.findViewById(R.id.random_card);
         fetchRandomFact = (RippleView) rootView.findViewById(R.id.random_get_fact);
-        pacmanIndicator= (AVLoadingIndicatorView) rootView.findViewById(R.id.pacman);
+        pacmanIndicator = (AVLoadingIndicatorView) rootView.findViewById(R.id.pacman);
+        bannerAdRandom = (AdView) rootView.findViewById(R.id.ad_banner_random);
+
+        final AdRequest bannerAdDateRequest = AdBanner.getBannerAd();
+
+        bannerAdRandom.loadAd(bannerAdDateRequest);
+//
+//        bannerAdRandom.postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//
+//            }
+//        }, 500);
 
         new RandomFactsAsyncTask().execute();
 
@@ -55,6 +71,14 @@ public class RandomFactsFragment extends Fragment {
         });
 
         return rootView;
+    }
+
+    private AdRequest adRequest() {
+        AdRequest request = new AdRequest.Builder()
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+                .addTestDevice("A34110A923EBD2913ADCF85066EE637A")
+                .build();
+        return request;
     }
 
     /**
@@ -85,7 +109,7 @@ public class RandomFactsFragment extends Fragment {
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
-            randomFactCard.setTitle("Math.random() !");
+            randomFactCard.setTitle("Math.random() ;");
             randomFactCard.setDescription(s);
             pacmanIndicator.setVisibility(View.INVISIBLE);
             randomFactCard.setVisibility(View.VISIBLE);

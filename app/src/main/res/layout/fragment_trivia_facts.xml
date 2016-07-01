@@ -5,6 +5,15 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg">
 
+    <com.google.android.gms.ads.AdView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ad_banner_trivia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        app:adSize="BANNER"
+        app:adUnitId="@string/banner_ad_id" />
+
     <com.blunderer.materialdesignlibrary.views.CardView
         android:id="@+id/trivia_card"
         android:layout_width="match_parent"
@@ -27,6 +36,7 @@
         android:focusableInTouchMode="true">
 
         <android.support.design.widget.TextInputEditText
+            android:id="@+id/edit_trivia"
             android:layout_width="225dp"
             android:layout_height="40dp"
             android:layout_marginLeft="19dp"
@@ -41,7 +51,6 @@
         android:id="@+id/trivia_get_fact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/trivia_card"
         android:layout_alignRight="@+id/trivia_card"
         android:layout_alignTop="@+id/trivia_input">
 
@@ -56,12 +65,12 @@
     </xyz.u999.creations.numer.RippleView>
 
     <!--<com.wang.avi.AVLoadingIndicatorView-->
-        <!--android:id="@+id/pacman"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--android:layout_marginTop="200dp"-->
-        <!--app:indicator="Pacman"-->
-        <!--app:indicator_color="@color/colorPrimary" />-->
+    <!--android:id="@+id/pacman"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginTop="200dp"-->
+    <!--app:indicator="Pacman"-->
+    <!--app:indicator_color="@color/colorPrimary" />-->
 
 </RelativeLayout>
