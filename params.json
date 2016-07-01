@@ -1,0 +1,6 @@
+{
+  "name": "Numer",
+  "tagline": "Know some unknown facts associated with Numbers.",
+  "body": "# Numers\r\nEvery Number has some fact associated with it.\r\nOur app will provide fact about maths,date,year and trivia releated to number you want to know about(Thanks to numbersapi.com).\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
