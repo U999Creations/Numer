@@ -1,4 +1,4 @@
-package com.u999.creations.numers;
+package xyz.u999.creations.numer;
 
 import org.junit.Test;
 

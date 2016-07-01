@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+    <com.google.android.gms.ads.AdView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ad_banner_math"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        app:adSize="BANNER"
+        app:adUnitId="@string/banner_ad_id" />
+
+    <com.blunderer.materialdesignlibrary.views.CardView
+        android:id="@+id/math_card"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="19dp"
+        android:layout_marginTop="118dp"
+        android:visibility="invisible" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/math_input"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="69dp"
+        android:focusableInTouchMode="true">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/edit_math"
+            android:layout_width="225dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="19dp"
+            android:layout_marginRight="19dp"
+            android:layout_marginTop="20dp"
+            android:hint="Got a number?"
+            android:inputType="number" />
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <xyz.u999.creations.numer.RippleView
+        android:id="@+id/math_get_fact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/math_card"
+        android:layout_alignTop="@+id/math_input">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="90dp"
+            android:layout_height="45dp"
+            android:background="@drawable/button_shape"
+            android:text="Get( )" />
+
+    </xyz.u999.creations.numer.RippleView>
+
+    <!--<com.wang.avi.AVLoadingIndicatorView-->
+    <!--android:id="@+id/pacman"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginTop="200dp"-->
+    <!--app:indicator="Pacman"-->
+    <!--app:indicator_color="@color/colorPrimary" />-->
+
+
+</RelativeLayout>
