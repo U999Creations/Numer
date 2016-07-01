@@ -1,12 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
 
-    <TextView
-        android:text="This is test text for Random Facts Fragment"
-        android:id="@+id/frag_trivia_fact"
+    <com.blunderer.materialdesignlibrary.views.CardView
+        android:id="@+id/random_card"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="19dp"
+        android:layout_marginTop="118dp"
+        android:visibility="invisible" />
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/pacman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        app:indicator="Pacman"
+        android:visibility="invisible"
+        app:indicator_color="@color/colorPrimary" />
+
+
+    <xyz.u999.creations.numer.RippleView
+        android:id="@+id/random_get_fact"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="67dp">
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="200dp"
+            android:background="@drawable/button_shape"
+            android:text="Random( )" />
+
+    </xyz.u999.creations.numer.RippleView>
 
 </RelativeLayout>

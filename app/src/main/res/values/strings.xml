@@ -1,9 +1,13 @@
 <resources>
     <string name="app_name">Numer</string>
-    <string name="math">Math</string>
-    <string name="trivia">Trivia</string>
-    <string name="year">Year</string>
-    <string name="fact">Facts</string>
-    <string name="random">Random Facts</string>
+    <string name="math">Math Facts</string>
+    <string name="trivia">Trivia Facts</string>
+    <string name="year">Year Facts</string>
+    <string name="random">Surprise Me!</string>
     <string name="about">About Dev</string>
+    <string name="date">Date facts</string>
+    <string name="dev_email">u999creations@gmail.com</string>
+    <string name="fact_type">Fact Types</string>
+    <string name="no_connection"> No Internet Connection :( </string>
+    <string name="no_connection_dialoge">It\'s 21st century! We can live without girlfriend but not without internet!!! Can We ??</string>
 </resources>
