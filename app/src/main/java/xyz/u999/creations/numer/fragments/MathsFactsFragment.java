@@ -3,6 +3,7 @@ package xyz.u999.creations.numer.fragments;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
@@ -25,7 +26,7 @@ import org.jsoup.nodes.Element;
 import java.io.IOException;
 
 import butterknife.ButterKnife;
-import xyz.u999.creations.numer.AdBanner;
+import xyz.u999.creations.numer.BannerAd;
 import xyz.u999.creations.numer.R;
 import xyz.u999.creations.numer.RippleView;
 
@@ -44,7 +45,7 @@ public class MathsFactsFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_math_facts, container, false);
+        final View rootView = inflater.inflate(R.layout.fragment_math_facts, container, false);
         ButterKnife.bind(this, rootView);
 
         YoYo.with(Techniques.FadeInDown).duration(500).playOn(rootView);
@@ -56,7 +57,7 @@ public class MathsFactsFragment extends Fragment {
         bannerAdMaths = (AdView) rootView.findViewById(R.id.ad_banner_math);
         inputMethodManager = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
 
-        final AdRequest bannerAdDateRequest = AdBanner.getBannerAd();
+        final AdRequest bannerAdDateRequest = BannerAd.getBannerAd();
 
         bannerAdMaths.postDelayed(new Runnable() {
             @Override
@@ -77,7 +78,11 @@ public class MathsFactsFragment extends Fragment {
             public void onClick(View v) {
                 inputMethodManager.hideSoftInputFromWindow(getView().getWindowToken(), 0);
                 String query = String.valueOf(getNumber.getEditText().getText());
-                new MathsFactsAsyncTask().execute(query);
+
+                if (query.isEmpty())
+                    Snackbar.make(rootView, "Please provide a number.", Snackbar.LENGTH_SHORT).show();
+                else
+                    new MathsFactsAsyncTask().execute(query);
             }
         });
 

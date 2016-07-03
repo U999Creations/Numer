@@ -22,7 +22,7 @@ import org.jsoup.nodes.Element;
 import java.io.IOException;
 
 import butterknife.ButterKnife;
-import xyz.u999.creations.numer.AdBanner;
+import xyz.u999.creations.numer.BannerAd;
 import xyz.u999.creations.numer.R;
 import xyz.u999.creations.numer.RippleView;
 
@@ -48,16 +48,14 @@ public class RandomFactsFragment extends Fragment {
         pacmanIndicator = (AVLoadingIndicatorView) rootView.findViewById(R.id.pacman);
         bannerAdRandom = (AdView) rootView.findViewById(R.id.ad_banner_random);
 
-        final AdRequest bannerAdDateRequest = AdBanner.getBannerAd();
+        final AdRequest bannerAdDateRequest = BannerAd.getBannerAd();
 
-        bannerAdRandom.loadAd(bannerAdDateRequest);
-//
-//        bannerAdRandom.postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//
-//            }
-//        }, 500);
+        bannerAdRandom.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                bannerAdRandom.loadAd(bannerAdDateRequest);
+            }
+        }, 300);
 
         new RandomFactsAsyncTask().execute();
 
