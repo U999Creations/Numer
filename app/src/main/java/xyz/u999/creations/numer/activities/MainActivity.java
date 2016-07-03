@@ -29,7 +29,7 @@ public class MainActivity extends NavigationDrawerActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        MobileAds.initialize(getApplicationContext(), "ca-app-pub-4812033264637585/6092847952");
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-");
     }
 
 
